@@ -21,7 +21,6 @@ $username = "root";
 $password = "Rdk77anf";
 $dbname = "sensordata_db";
 
-//An array to fuck with responses
 $responses = array();
 
 //All json entry data/arrays
