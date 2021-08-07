@@ -32,14 +32,14 @@ def Values(measure):
     return randomValue
 
 # VM DHCP Lease in HHK HOME Network
-host = 'ipaddress'
+host = 'ipaddresses'
 port = 80
 
 contentStr='{"IOTSensorLocation": "%s","Measurement": "%s","Value": "%i"}'%(RandomRoom(),RandomMeasurement,Values(RandomMeasurement))
 
 # url = 'http://192.168.100.100/i40Test/v2/InsertJsonRESTData.php' 
 # note change the URL to match your server IP address
-url = "http://ipaddress/SENSORDATA_INSERT_JSON_API.php" 
+url = "http://ipaddresses/SENSORDATA_INSERT_JSON_API.php" 
 
 
 json_data = requests.post(url,data = contentStr).json()
