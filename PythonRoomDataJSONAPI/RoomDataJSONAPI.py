@@ -1,4 +1,4 @@
-# Author: Cameron Smith
+# Author: Haghani Hakimi
 
 # ref - https://docs.python.org/3/howto/sockets.html
 import socket
@@ -32,14 +32,14 @@ def Values(measure):
     return randomValue
 
 # VM DHCP Lease in HHK HOME Network
-host = '192.168.200.90'
+host = 'myipaddress'
 port = 80
 
 contentStr='{"IOTSensorLocation": "%s","Measurement": "%s","Value": "%i"}'%(RandomRoom(),RandomMeasurement,Values(RandomMeasurement))
 
 # url = 'http://192.168.100.100/i40Test/v2/InsertJsonRESTData.php' 
 # note change the URL to match your server IP address
-url = "http://192.168.200.90/SENSORDATA_INSERT_JSON_API.php" 
+url = "http://myipaddress/SENSORDATA_INSERT_JSON_API.php" 
 
 
 json_data = requests.post(url,data = contentStr).json()
